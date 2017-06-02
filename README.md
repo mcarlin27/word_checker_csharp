@@ -2,7 +2,6 @@
 | Behavior | First Input | Second Input | Example Output | Reasoning for Spec |
 | :-------------     | :------------- | :------------- | :------------- | :------------- |
 | **Recognize Matching Single Letter User Inputs** | "a" | "a" | "Match: 1" | Simplest possible inputs, no need to use arrays or a for loop. |
-| **Fail to Recognize Match of Single Letter User Inputs Without Case Matching** | "a" | "A" | "Match: 0" | Matches at this time should be case sensitive, as the program does not at this point standardize input cases. |
 | **Recognize Match of Single Letter First Input in Multi-letter Second Input** | "a" | "a m" | "Match: 1" | Next simplest step. No need to split string, now using for loop. |
 | **Recognize Multiple Matches of Single Letter First Input to Multi-letter Second Input** | "a" | "a m a" | "Match: 2" | Still no need to split string, for loop should catch every instance of the first string. |
 | **Fail to Recognize Partial Matches** | "a" | "am" | "Match: 0" | Program should only recognize full matches, this spec is to test that this condition is true. |
