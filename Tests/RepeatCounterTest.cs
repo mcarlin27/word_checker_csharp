@@ -63,7 +63,7 @@ namespace WordCounter
       Assert.Equal(true, matchCount == 2);
     }
     [Fact]
-    public void RepeatCounter_MultiLetterMatch_true()
+    public void RepeatCounter_MultiLetterMatch_1()
     {
       //Arrange
       string firstInput = "alex";
