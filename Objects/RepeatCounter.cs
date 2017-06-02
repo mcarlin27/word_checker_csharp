@@ -6,35 +6,13 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    private string _firstInput;
-    private string _secondInput;
-
-    public RepeatCounter(string firstInput, string secondInput)
-    {
-      _firstInput = firstInput;
-      _secondInput = secondInput;
-    }
-    public string GetFirstInput()
-    {
-      return _firstInput;
-    }
-    public void SetFirstInput(string firstInput)
-    {
-      _firstInput = firstInput;
-    }
-    public string GetSecondInput()
-    {
-      return _secondInput;
-    }
-    public void SetSecondInput(string secondInput)
-    {
-      _secondInput = secondInput;
-    }
     public int CountRepeats(string firstInput, string secondInput)
     {
-      string[] secondInputArray = secondInput.Split(' ');
+      string queryInput = firstInput.ToLower();
+      string dataInput = secondInput.ToLower();
+      string[] secondInputArray = dataInput.Split(' ');
       int matchCount = 0;
-      string match = firstInput;
+      string match = queryInput;
 
       for(int i = 0; i < secondInputArray.Length; i++)
       {

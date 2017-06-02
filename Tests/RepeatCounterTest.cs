@@ -12,8 +12,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
-      Console.WriteLine(instance);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -27,7 +26,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "am";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -41,7 +40,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a m";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -55,7 +54,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a m a";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -69,7 +68,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "alex";
       string secondInput = "alex";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -83,7 +82,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "alex";
       string secondInput = "alex m";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -97,7 +96,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "alex";
       string secondInput = "alex and alex";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -111,7 +110,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "alex";
       string secondInput = "Alex";
-      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      RepeatCounter instance = new RepeatCounter();
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
