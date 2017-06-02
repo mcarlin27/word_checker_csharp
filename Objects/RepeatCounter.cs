@@ -10,7 +10,10 @@ namespace WordCounter
     {
       string queryInput = firstInput.ToLower();
       string dataInput = secondInput.ToLower();
+      // string separators = ".,/?!@#$%&;:";
+      // separators.ToCharArray();
       string[] secondInputArray = dataInput.Split(' ');
+      // secondInputArray.Replace(separators, "");
       int matchCount = 0;
       string match = queryInput;
 
@@ -18,12 +21,10 @@ namespace WordCounter
       {
         if (secondInputArray[i] == match)
         {
-          Console.WriteLine(secondInputArray[i]);
           matchCount ++;
         }
         else
         {
-          Console.WriteLine(secondInputArray[i]);
           matchCount += 0;
         }
       }
