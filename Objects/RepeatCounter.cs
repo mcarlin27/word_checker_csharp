@@ -8,7 +8,7 @@ namespace WordCounter
     public int CountRepeats(string firstInput, string secondInput)
     {
       int matchCount = 0;
-      if (secondInput.Contains(firstInput))
+      if (firstInput == secondInput)
       {
         matchCount += 1;
       }
