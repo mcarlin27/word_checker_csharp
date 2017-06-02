@@ -7,14 +7,19 @@ namespace WordCounter
   {
     public int CountRepeats(string firstInput, string secondInput)
     {
+      string [] secondInputArray = secondInput.Split(' ');
       int matchCount = 0;
-      if (firstInput == secondInput)
+
+      for(int i = 0; i < secondInputArray.Length; i++)
       {
-        matchCount += 1;
-      }
-      else
-      {
-        matchCount = 0;
+        if (secondInputArray[i] == firstInput)
+        {
+          matchCount ++;
+        }
+        else
+        {
+          matchCount += 0;
+        }
       }
       return matchCount;
     }
