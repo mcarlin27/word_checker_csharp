@@ -91,5 +91,19 @@ namespace WordCounter
       //Assert
       Assert.Equal(true, matchCount == 1);
     }
+    [Fact]
+    public void RepeatCounter_MultiLetterMultiInputMultiMatch_true()
+    {
+      //Arrange
+      string firstInput = "alex";
+      string secondInput = "alex and alex";
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 2);
+    }
   }
 }
