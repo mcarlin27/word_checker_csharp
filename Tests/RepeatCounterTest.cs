@@ -105,5 +105,19 @@ namespace WordCounter
       //Assert
       Assert.Equal(true, matchCount == 2);
     }
+    [Fact]
+    public void RepeatCounter_IsCaseSensitive_false()
+    {
+      //Arrange
+      string firstInput = "alex";
+      string secondInput = "Alex";
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 1);
+    }
   }
 }
