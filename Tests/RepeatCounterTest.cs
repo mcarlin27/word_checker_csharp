@@ -33,19 +33,19 @@ namespace WordCounter
       //Assert
       Assert.Equal(true, matchCount == 0);
     }
-    // [Fact]
-    // public void RepeatCounter_SingleLetterMultiInputMatch_true()
-    // {
-    //   //Arrange
-    //   string firstInput = "a";
-    //   string secondInput = "a m";
-    //   RepeatCounter instance = new RepeatCounter();
-    //
-    //   //Act
-    //   int matchCount = instance.CountRepeats(firstInput, secondInput);
-    //
-    //   //Assert
-    //   Assert.Equal(true, matchCount == 1);
-    // }
+    [Fact]
+    public void RepeatCounter_SingleLetterMultiInputMatch_true()
+    {
+      //Arrange
+      string firstInput = "a";
+      string secondInput = "a m";
+      RepeatCounter instance = new RepeatCounter();
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 1);
+    }
   }
 }
