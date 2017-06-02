@@ -118,5 +118,19 @@ namespace WordCounter
       //Assert
       Assert.Equal(true, matchCount == 1);
     }
+    [Fact]
+    public void RepeatCounter_IsPunctuationSensitive_false()
+    {
+      //Arrange
+      string firstInput = "alex";
+      string secondInput = "Alex, and Alex!";
+      RepeatCounter instance = new RepeatCounter();
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 2);
+    }
   }
 }
