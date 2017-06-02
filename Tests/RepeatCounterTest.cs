@@ -1,4 +1,5 @@
 using Xunit;
+using System;
 using System.Collections.Generic;
 
 namespace WordCounter
@@ -60,6 +61,20 @@ namespace WordCounter
 
       //Assert
       Assert.Equal(true, matchCount == 2);
+    }
+    [Fact]
+    public void RepeatCounter_MultiLetterMatch_true()
+    {
+      //Arrange
+      string firstInput = "alex";
+      string secondInput = "alex";
+      RepeatCounter instance = new RepeatCounter();
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 1);
     }
   }
 }
