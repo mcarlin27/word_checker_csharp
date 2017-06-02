@@ -12,7 +12,8 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a";
-      RepeatCounter instance = new RepeatCounter();
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+      Console.WriteLine(instance);
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -26,7 +27,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "am";
-      RepeatCounter instance = new RepeatCounter();
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -40,7 +41,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a m";
-      RepeatCounter instance = new RepeatCounter();
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -54,7 +55,7 @@ namespace WordCounter
       //Arrange
       string firstInput = "a";
       string secondInput = "a m a";
-      RepeatCounter instance = new RepeatCounter();
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
@@ -63,12 +64,26 @@ namespace WordCounter
       Assert.Equal(true, matchCount == 2);
     }
     [Fact]
-    public void RepeatCounter_MultiLetterMatch_1()
+    public void RepeatCounter_MultiLetterMatch_true()
     {
       //Arrange
       string firstInput = "alex";
       string secondInput = "alex";
-      RepeatCounter instance = new RepeatCounter();
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
+
+      //Act
+      int matchCount = instance.CountRepeats(firstInput, secondInput);
+
+      //Assert
+      Assert.Equal(true, matchCount == 1);
+    }
+    [Fact]
+    public void RepeatCounter_MultiLetterMultiMatch_true()
+    {
+      //Arrange
+      string firstInput = "alex";
+      string secondInput = "alex m";
+      RepeatCounter instance = new RepeatCounter(firstInput, secondInput);
 
       //Act
       int matchCount = instance.CountRepeats(firstInput, secondInput);
