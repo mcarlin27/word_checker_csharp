@@ -31,7 +31,7 @@ namespace WordCounter
       int matchCount = instance.CountRepeats(firstInput, secondInput);
 
       //Assert
-      Assert.Equal(true, matchCount == 1);
+      Assert.Equal(true, matchCount == 0);
     }
     // [Fact]
     // public void RepeatCounter_SingleLetterMultiInputMatch_true()
