@@ -1,12 +1,12 @@
-# Worch Counter
+# Word Counter
 
-#### A program that allows users to submit two inputs and determine the occurence of the first input in the second. 6/2/17
+#### A program that allows users to submit two inputs and determine the occurrence of the first input in the second. 6/2/17
 
 #### By **Marilyn Carlin**
 
 ## Description
 
-A website created with C# and HTML where a user can submit text to two input fields and detemine the occurence of the first input within the second.
+A website created with C# and HTML where a user can submit text to two input fields and determine the occurrence of the first input within the second.
 
 
 

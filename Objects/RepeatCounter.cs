@@ -1,8 +1,7 @@
-using Xunit;
 using System;
 using System.Collections.Generic;
 
-namespace WordCounter
+namespace WordCounter.Objects
 {
   public class RepeatCounter
   {
@@ -13,13 +12,13 @@ namespace WordCounter
       // string separators = ".,/?!@#$%&;:";
       // separators.ToCharArray();
       string[] secondInputArray = dataInput.Split(' ');
+      Console.WriteLine(secondInputArray);
       // secondInputArray.Replace(separators, "");
       int matchCount = 0;
-      string match = queryInput;
 
       for(int i = 0; i < secondInputArray.Length; i++)
       {
-        if (secondInputArray[i] == match)
+        if (secondInputArray[i] == queryInput)
         {
           matchCount ++;
         }
